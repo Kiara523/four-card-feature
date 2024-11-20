@@ -39,7 +39,7 @@
 
      /* BORDER STYLES */
 
-     --SHADOW-COLOR: hsla(234, 12%, 34%);
+     --SHADOW-COLOR: rgb(61, 72, 169);
      --BOX-SHADOW: -1px 5px 25px -14px var(--SHADOW-COLOR);
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 body {
-    padding-block: 2rem;
+    padding-block: 4.5rem;
 }
 
 .header__first-title,
@@ -92,29 +92,27 @@ body {
     font-size: var(--HEADER-TEXT-FONT-SIZE);
     line-height: 1.5;
     padding-top: 1rem;
-    padding-bottom: 2.8rem;
     text-wrap: balance;
     }
 
 .feature__text {
     font-size: var(--FEATURE-TEXT-FONT-SIZE);
     line-height: 1.8;
-    padding-bottom: 1rem;
+    padding-bottom: .3rem;
 }
 
 /*  COMPONENTS  */
 
 .title {
     text-align: center;
+    padding-bottom: 4rem;
 }
 
 .feature {
-    border-top: 3.5px solid;
+    border-top: 4px solid;
     border-radius: 5px;
     box-shadow: var(--BOX-SHADOW);
-    padding: 1.8rem;
-    position: relative;
-
+    padding: 2rem;
 }
 
 svg {
@@ -124,7 +122,7 @@ svg {
 .svg {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: end;
 }
 
 .feature__supervisor--style {
@@ -145,12 +143,12 @@ svg {
 
 .grid-container {
     display: grid;
-    gap: 1.7rem;
-    margin-inline: 10px;
+    gap: 2rem;
+    margin-inline: 0.625rem;
 }
 
     .attribution { 
-        font-size: 11px; 
+        font-size: 0.688rem; 
         text-align: center;
         padding-top: 0.5rem;
     }
@@ -166,12 +164,8 @@ svg {
             align-items: center;
         }
 
-        span {
+        .break {
             display: block;
-        }
-
-        svg {
-            transform: scale(0.7);
         }
 
         .grid-container {
@@ -199,32 +193,37 @@ svg {
     
     @media (width >= 67.2em ){
 
-        body {
+        /* body {
             padding-block: 0;
-        }
+        } */
         
         main {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        
+
         .header__first-title,
         .header__second-title {
             font-size: 2.25rem;
         }
 
-        span {
+        .break {
             display: block;
         }
 
-        svg {
-            transform: scale(0.9);
+        .feature {
+            position: relative;
+        }
+
+        .svg {
+            position: absolute;
+            translate: 350% 45%;
         }
 
         .grid-container {
-            grid-template-columns: repeat(6, 150px);
-            grid-template-rows: repeat(4, 100px);
+            grid-template-columns: repeat(6, 160px);
+            grid-template-rows: repeat(4, 110px);
         }
 
         .feature__supervisor--style {
